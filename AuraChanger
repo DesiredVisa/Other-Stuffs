@@ -30,6 +30,30 @@ for i, v in pairs(game.Players:GetChildren()) do
             end)
         end)
     end
+    if v.Name == "Quantavio_alt3" then
+        pcall(function()
+            for i, v in pairs(game.Players.Quantavio_alt3.Character:GetDescendants()) do
+                if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
+                    v.LightEmission = 10
+                    v.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(131, 240, 84)), ColorSequenceKeypoint.new(1, Color3.fromRGB(77, 255, 0)) }
+                end
+            end
+            game.Players.Quantavio_alt3.DescendantAdded:Connect(function(obj)
+                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+                    obj.LightEmission = 10
+                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(131, 240, 84)), ColorSequenceKeypoint.new(1, Color3.fromRGB(77, 255, 0)) }
+                end
+            end)
+        end)
+        game.Players.Quantavio_alt3.CharacterAdded:Connect(function(char)
+            char.DescendantAdded:Connect(function(obj)
+                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+                    obj.LightEmission = 10
+                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(131, 240, 84)), ColorSequenceKeypoint.new(1, Color3.fromRGB(77, 255, 0)) }
+                end
+            end)
+        end)
+    end
     if v.Name == "DesiredVisa" then
         pcall(function()
             for i, v in pairs(game.Players.DesiredVisa.Character:GetDescendants()) do
@@ -75,5 +99,14 @@ game.Players.PlayerAdded:Connect(function(plr)
                 end
             end)
         end)
-    end
+    elseif plr.Name == "Quantavio_alt3" then
+        game.Players.Quantavio_alt3.CharacterAdded:Connect(function(char)
+            char.DescendantAdded:Connect(function(obj)
+                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+                    obj.LightEmission = 10
+                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(131, 240, 84)), ColorSequenceKeypoint.new(1, Color3.fromRGB(77, 255, 0)) }
+                end
+            end)
+        end)
+end
 end)
