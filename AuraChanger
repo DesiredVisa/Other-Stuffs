@@ -78,6 +78,30 @@ for i, v in pairs(game.Players:GetChildren()) do
             end)
         end)
     end
+    if v.Name == "IITheReal_JoeyAlt2II" then
+        pcall(function()
+            for i, v in pairs(game.Players.IITheReal_JoeyAlt2II.Character:GetDescendants()) do
+                if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
+                    v.LightEmission = 10
+                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(252, 3, 244)), ColorSequenceKeypoint.new(1, Color3.fromRGB(252, 3, 244)) }
+                end
+            end
+            game.Players.IITheReal_JoeyAlt2II.Character.DescendantAdded:Connect(function(obj)
+                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+                    obj.LightEmission = 10
+                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(252, 3, 244)), ColorSequenceKeypoint.new(1, Color3.fromRGB(252, 3, 244)) }
+                end
+            end)
+        end)
+        game.Players.IITheReal_JoeyAlt2II.CharacterAdded:Connect(function(char)
+            char.DescendantAdded:Connect(function(obj)
+                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+                    obj.LightEmission = 10
+                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(252, 3, 244)), ColorSequenceKeypoint.new(1, Color3.fromRGB(252, 3, 244)) }
+                end
+            end)
+        end)
+    end
 end
 
 game.Players.PlayerAdded:Connect(function(plr)
@@ -108,5 +132,14 @@ game.Players.PlayerAdded:Connect(function(plr)
                 end
             end)
         end)
-end
+    elseif plr.Name == "IITheReal_JoeyAlt2II" then
+        game.Players.IITheReal_JoeyAlt2II.CharacterAdded:Connect(function(char)
+            char.DescendantAdded:Connect(function(obj)
+                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+                    obj.LightEmission = 10
+                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(252, 3, 244)), ColorSequenceKeypoint.new(1, Color3.fromRGB(252, 3, 244)) }
+                end
+            end)
+        end)
+    end
 end)
