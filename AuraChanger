@@ -63,7 +63,15 @@ for i, v in pairs(game.Players:GetChildren()) do
             game.Players.DesiredVisa.Character.DescendantAdded:Connect(function(obj)
                 if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
                     obj.LightEmission = 10
-                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1, Color3.fromRGB(117, 244, 255)) }
+                    local speed = 5
+                    spawn(function()
+                        while task.wait() do
+                            for i = 0,1,0.001*speed do
+                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
+                                wait()
+                            end
+                        end
+                    end)
                 end
             end)
         end)
@@ -71,7 +79,15 @@ for i, v in pairs(game.Players:GetChildren()) do
             char.DescendantAdded:Connect(function(obj)
                 if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
                     obj.LightEmission = 10
-                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1, Color3.fromRGB(117, 244, 255)) }
+                    local speed = 5
+                    spawn(function()
+                        while task.wait() do
+                            for i = 0,1,0.001*speed do
+                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
+                                wait()
+                            end
+                        end
+                    end)
                 end
             end)
         end)
@@ -98,6 +114,15 @@ for i, v in pairs(game.Players:GetChildren()) do
                 end
             end)
         end)
+    elseif v.Name == "x66_Ellenax" then
+        game.Players.x66_Ellenax.CharacterAdded:Connect(function(char)
+            char.DescendantAdded:Connect(function(obj)
+                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+                    obj.LightEmission = 10
+                    obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 123, 0)), ColorSequenceKeypoint.new(0.3, Color3.fromRGB(255, 251, 0)), ColorSequenceKeypoint.new(0.4, Color3.fromRGB(106, 255, 0)), ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 213)), ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 123, 255)), ColorSequenceKeypoint.new(0.7, Color3.fromRGB(136, 0, 255)), ColorSequenceKeypoint.new(0.8, Color3.fromRGB(255, 0, 217)), ColorSequenceKeypoint.new(0.9, Color3.fromRGB(255, 0, 102)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 153))}
+                end
+            end)
+        end)
     end
 end
 
@@ -116,7 +141,15 @@ game.Players.PlayerAdded:Connect(function(plr)
             char.DescendantAdded:Connect(function(obj)
                 if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
                     obj.LightEmission = 10
-                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1, Color3.fromRGB(117, 244, 255)) }
+                    local speed = 5
+                    spawn(function()
+                        while task.wait() do
+                            for i = 0,1,0.001*speed do
+                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
+                                wait()
+                            end
+                        end
+                    end)
                 end
             end)
         end)
@@ -131,6 +164,15 @@ game.Players.PlayerAdded:Connect(function(plr)
         end)
     elseif plr.Name == "IITheReal_JoeyAlt2II" then
         game.Players.IITheReal_JoeyAlt2II.CharacterAdded:Connect(function(char)
+            char.DescendantAdded:Connect(function(obj)
+                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+                    obj.LightEmission = 10
+                    obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 123, 0)), ColorSequenceKeypoint.new(0.3, Color3.fromRGB(255, 251, 0)), ColorSequenceKeypoint.new(0.4, Color3.fromRGB(106, 255, 0)), ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 213)), ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 123, 255)), ColorSequenceKeypoint.new(0.7, Color3.fromRGB(136, 0, 255)), ColorSequenceKeypoint.new(0.8, Color3.fromRGB(255, 0, 217)), ColorSequenceKeypoint.new(0.9, Color3.fromRGB(255, 0, 102)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 153))}
+                end
+            end)
+        end)
+    elseif plr.Name == "x66_Ellenax" then
+        game.Players.x66_Ellenax.CharacterAdded:Connect(function(char)
             char.DescendantAdded:Connect(function(obj)
                 if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
                     obj.LightEmission = 10
