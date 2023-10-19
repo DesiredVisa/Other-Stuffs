@@ -5,254 +5,64 @@ if game.PlaceId ~= 2202352383 then return end
 
 repeat task.wait() until game.Players.LocalPlayer.Character
 
+function RainbowAura(player)
+    for i, v in pairs(player.Character:GetDescendants()) do
+        if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
+            v.LightEmission = 10
+            local speed = 5
+            spawn(function()
+                while task.wait() do
+                    for i = 0,1,0.001*speed do
+                        v.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
+                        wait()
+                    end
+                end
+            end)
+        end
+    end
+    player.DescendantAdded:Connect(function(obj)
+        if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+            obj.LightEmission = 10
+            local speed = 5
+            spawn(function()
+                while task.wait() do
+                    for i = 0,1,0.001*speed do
+                        obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
+                        wait()
+                    end
+                end
+            end)
+        end
+    end)
+    player.CharacterAdded:Connect(function(char)
+        char.DescendantAdded:Connect(function(obj)
+            if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
+                obj.LightEmission = 10
+                local speed = 5
+                spawn(function()
+                    while task.wait() do
+                        for i = 0,1,0.001*speed do
+                            obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
+                            wait()
+                        end
+                    end
+                end)
+            end
+        end)
+    end)
+end
+
 for i, v in pairs(game.Players:GetChildren()) do
     if v.Name == "quantavio" then
-        pcall(function()
-            for i, v in pairs(game.Players.quantavio.Character:GetDescendants()) do
-                if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end
-            game.Players.quantavio.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
-        game.Players.quantavio.CharacterAdded:Connect(function(char)
-            char.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
-    end
-end
-for i, v in pairs(game.Players:GetChildren()) do
-    if v.Name == "Quantavio_alt3" then
-        pcall(function()
-            for i, v in pairs(game.Players.Quantavio_alt3.Character:GetDescendants()) do
-                if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end
-            game.Players.Quantavio_alt3.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
-        game.Players.Quantavio_alt3.CharacterAdded:Connect(function(char)
-            char.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
-    end
-end
-for i, v in pairs(game.Players:GetChildren()) do
-    if v.Name == "DesiredVisa" then
-        pcall(function()
-            for i, v in pairs(game.Players.DesiredVisa.Character:GetDescendants()) do
-                if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end
-            game.Players.DesiredVisa.Character.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
-        game.Players.DesiredVisa.CharacterAdded:Connect(function(char)
-            char.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
-    end
-end
-for i, v in pairs(game.Players:GetChildren()) do
-    if v.Name == "IITheReal_JoeyAlt2II" then
-        pcall(function()
-            for i, v in pairs(game.Players.IITheReal_JoeyAlt2II.Character:GetDescendants()) do
-                if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end
-            game.Players.IITheReal_JoeyAlt2II.Character.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
-        game.Players.IITheReal_JoeyAlt2II.CharacterAdded:Connect(function(char)
-            char.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
-    end
-end
-for i, v in pairs(game.Players:GetChildren()) do
-    if v.Name == "x66_Ellenax" then
-        pcall(function()
-            for i, v in pairs(game.Players.x66_Ellenax.Character:GetDescendants()) do
-                if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end
-            game.Players.x66_Ellenax.Character.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
-        game.Players.x66_Ellenax.CharacterAdded:Connect(function(char)
-            char.DescendantAdded:Connect(function(obj)
-                if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
-                    obj.LightEmission = 10
-                    local speed = 5
-                    spawn(function()
-                        while task.wait() do
-                            for i = 0,1,0.001*speed do
-                                obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromHSV(i,1,1)), ColorSequenceKeypoint.new(1, Color3.fromHSV(i,1,1))}
-                                wait()
-                            end
-                        end
-                    end)
-                end
-            end)
-        end)
+        RainbowAura(v)
+    elseif v.Name == "Quantavio_alt3" then
+        RainbowAura(v)
+    elseif v.Name == "DesiredVisa" then
+        RainbowAura(v)
+    elseif v.Name == "IITheReal_JoeyAlt2II" then
+        RainbowAura(v)
+    elseif v.Name == "x66_Ellenax" then
+        RainbowAura(v)
     end
 end
 
