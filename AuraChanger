@@ -29,8 +29,7 @@ for i, v in pairs(game.Players:GetChildren()) do
                 end
             end)
         end)
-    end
-    if v.Name == "Quantavio_alt3" then
+    elseif v.Name == "Quantavio_alt3" then
         pcall(function()
             for i, v in pairs(game.Players.Quantavio_alt3.Character:GetDescendants()) do
                 if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
@@ -53,8 +52,7 @@ for i, v in pairs(game.Players:GetChildren()) do
                 end
             end)
         end)
-    end
-    if v.Name == "DesiredVisa" then
+    elseif v.Name == "DesiredVisa" then
         pcall(function()
             for i, v in pairs(game.Players.DesiredVisa.Character:GetDescendants()) do
                 if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
@@ -77,19 +75,18 @@ for i, v in pairs(game.Players:GetChildren()) do
                 end
             end)
         end)
-    end
-    if v.Name == "IITheReal_JoeyAlt2II" then
+    elseif v.Name == "IITheReal_JoeyAlt2II" then
         pcall(function()
             for i, v in pairs(game.Players.IITheReal_JoeyAlt2II.Character:GetDescendants()) do
                 if v.Name == "Aura1" or v.Name == "Aura2" or v.Name == "Aura3" then
                     v.LightEmission = 10
-                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(252, 3, 244)), ColorSequenceKeypoint.new(1, Color3.fromRGB(252, 3, 244)) }
+                    obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 123, 0)), ColorSequenceKeypoint.new(0.3, Color3.fromRGB(255, 251, 0)), ColorSequenceKeypoint.new(0.4, Color3.fromRGB(106, 255, 0)), ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 213)), ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 123, 255)), ColorSequenceKeypoint.new(0.7, Color3.fromRGB(136, 0, 255)), ColorSequenceKeypoint.new(0.8, Color3.fromRGB(255, 0, 217)), ColorSequenceKeypoint.new(0.9, Color3.fromRGB(255, 0, 102)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 153))}
                 end
             end
             game.Players.IITheReal_JoeyAlt2II.Character.DescendantAdded:Connect(function(obj)
                 if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
                     obj.LightEmission = 10
-                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(252, 3, 244)), ColorSequenceKeypoint.new(1, Color3.fromRGB(252, 3, 244)) }
+                    obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 123, 0)), ColorSequenceKeypoint.new(0.3, Color3.fromRGB(255, 251, 0)), ColorSequenceKeypoint.new(0.4, Color3.fromRGB(106, 255, 0)), ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 213)), ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 123, 255)), ColorSequenceKeypoint.new(0.7, Color3.fromRGB(136, 0, 255)), ColorSequenceKeypoint.new(0.8, Color3.fromRGB(255, 0, 217)), ColorSequenceKeypoint.new(0.9, Color3.fromRGB(255, 0, 102)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 153))}
                 end
             end)
         end)
@@ -97,7 +94,7 @@ for i, v in pairs(game.Players:GetChildren()) do
             char.DescendantAdded:Connect(function(obj)
                 if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
                     obj.LightEmission = 10
-                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(252, 3, 244)), ColorSequenceKeypoint.new(1, Color3.fromRGB(252, 3, 244)) }
+                    obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 123, 0)), ColorSequenceKeypoint.new(0.3, Color3.fromRGB(255, 251, 0)), ColorSequenceKeypoint.new(0.4, Color3.fromRGB(106, 255, 0)), ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 213)), ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 123, 255)), ColorSequenceKeypoint.new(0.7, Color3.fromRGB(136, 0, 255)), ColorSequenceKeypoint.new(0.8, Color3.fromRGB(255, 0, 217)), ColorSequenceKeypoint.new(0.9, Color3.fromRGB(255, 0, 102)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 153))}
                 end
             end)
         end)
