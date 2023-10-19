@@ -134,7 +134,7 @@ game.Players.PlayerAdded:Connect(function(plr)
             char.DescendantAdded:Connect(function(obj)
                 if obj.Name == "Aura1" or obj.Name == "Aura2" or obj.Name == "Aura3" then
                     obj.LightEmission = 10
-                    obj.Color = ColorSequence.new{ ColorSequenceKeypoint.new(0, Color3.fromRGB(252, 3, 244)), ColorSequenceKeypoint.new(1, Color3.fromRGB(252, 3, 244)) }
+                    obj.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 123, 0)), ColorSequenceKeypoint.new(0.3, Color3.fromRGB(255, 251, 0)), ColorSequenceKeypoint.new(0.4, Color3.fromRGB(106, 255, 0)), ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 213)), ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 123, 255)), ColorSequenceKeypoint.new(0.7, Color3.fromRGB(136, 0, 255)), ColorSequenceKeypoint.new(0.8, Color3.fromRGB(255, 0, 217)), ColorSequenceKeypoint.new(0.9, Color3.fromRGB(255, 0, 102)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 255, 153))}
                 end
             end)
         end)
